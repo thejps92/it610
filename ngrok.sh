@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Prompts the user from the terminal to enter their authtoken
-echo "Input your authtoken:"
+# Prompts the user from the terminal to enter their ngrok authtoken
+echo "Enter your ngrok authtoken:"
 
-# Reads the user input from the terminal and stores the authtoken in the variable "${authtoken}"
+# Reads the user input from the terminal and stores the ngrok authtoken in the variable "${authtoken}"
 read authtoken
 
-# Saves the authtoken stored in the variable "authtoken" to the "ngrok.yml" configuration file
+# Saves the ngrok authtoken stored in the variable "${authtoken}" to the "ngrok.yml" configuration file
 ngrok config add-authtoken ${authtoken}
 
 # Appends the line "web_addr: 0.0.0.0:4040" to the end of the "ngrok.yml" configuration file
