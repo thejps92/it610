@@ -46,12 +46,12 @@ cd it610
 Set-ExecutionPolicy Bypass -Scope Process -Force; .\docker.ps1
 ```
 
-7. The Minecraft server should now be starting in the left tmux terminal pane, and in the right tmux terminal pane, it will prompt you to input your ngrok authtoken, which can be found [here](https://dashboard.ngrok.com/get-started/your-authtoken). Copy and paste your ngrok authtoken into the terminal and hit `Enter`. If done correctly, your tmux terminal session should look similar to the following [preview](#preview).
+7. The Minecraft server should now be starting in the left tmux terminal pane, and in the right tmux terminal pane, it will prompt you to enter your ngrok authtoken, which can be found [here](https://dashboard.ngrok.com/get-started/your-authtoken). Copy and paste your ngrok authtoken into the terminal and hit `Enter`. If done correctly, your tmux terminal session should look similar to the following [preview](#preview).
 
 > [!NOTE]
 > If you need to select a specific tmux terminal pane, use the shortcut `Ctrl`+`B` and then use the &larr; key to select the left tmux terminal pane and the &rarr; key to select the right tmux terminal pane.
 
-8. In the right tmux terminal pane, you should see your ngrok terminal interface, and there will be a forwarding URL that looks similar to **1.tcp.ngrok.io:12345**. This is the URL users will input into the **Server Address** bar in Minecraft in order to connect to your Minecraft server.
+8. In the right tmux terminal pane, you should see your ngrok terminal interface, and there will be a forwarding URL that looks similar to **1.tcp.ngrok.io:12345**. This is the URL users will enter into the **Server Address** bar in Minecraft in order to connect to your Minecraft server.
 
 > [!NOTE]
 > If you wish to access the ngrok web interface, open a web browser on the host machine running the Docker container and type the following in the address bar: **http://127.0.0.1:4040**
