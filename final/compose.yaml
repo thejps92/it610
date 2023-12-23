@@ -1,0 +1,18 @@
+services:
+  minecraft:
+    tty: true # Ensures that a pseudo-TTY (Teletype) is allocated for the container to handle interactive commands
+    build:
+      context: ./minecraft # Specifies the path to the folder containing the Minecraft Dockerfile
+    ports:
+      - "25565:25565" # Publishes the port for Minecraft
+    volumes:
+      - mc_data:/minecraft  # Mounts a volume to persist Minecraft data
+
+  ngrok:
+    tty: true # Ensures that a pseudo-TTY (Teletype) is allocated for the container to handle interactive commands
+    build:
+      context: ./ngrok # Specifies the path to the folder containing the ngrok Dockerfile
+    network_mode: host # Instructs the ngrok service to use the host network stack
+
+volumes:
+  mc_data:  # Defines a named volume for Minecraft data
